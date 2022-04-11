@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: managerservice
+        uri: lb://managerservice
+        predicates:
+        - Path=/room/**
+#      - id: inMateService
+#        uri: http://localhost:2006/
+#        predicates:
+#        - Path=/consumer/**
