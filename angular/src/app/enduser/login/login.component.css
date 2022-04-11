@@ -1,0 +1,17 @@
+.bkground_color{
+    background-color: blanchedalmond;
+}
+
+.signup{
+    text-decoration: none;
+    font-size: 21px;
+    margin-top:  -12px;
+    margin-right: 1em;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    height: 40%;
+    background-color: darkgray;
+}

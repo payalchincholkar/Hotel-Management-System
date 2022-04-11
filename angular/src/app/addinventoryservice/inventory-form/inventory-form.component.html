@@ -1,0 +1,41 @@
+<div class="text-center mt-4 name">
+    <h1>Post inventory Data</h1>
+</div>
+<form novalidate>
+
+    <div class="wrapper">
+        <form class="p-3 inventryform" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="id"  placeholder='id'  required #id="ngModel" ngModel  />
+                <span *ngIf="id.invalid && id.touched" style="color:red;">enter valid id</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="beds" id="beds" placeholder='beds'required #beds="ngModel" ngModel  />
+                <span *ngIf="beds.invalid && beds.touched" style="color:red;">enter valid bed number</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="tables" id="tables" placeholder='tables' #tables="ngModel" ngModel required />
+                <span *ngIf="tables.invalid && tables.touched" style="color:red;">enter valid table number</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="chairs" id="chairs" placeholder='chairs' #chairs="ngModel" ngModel required />
+                <span *ngIf="chairs.invalid && chairs.touched" style="color:red;">enter valid chair number</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="pillow" id="pillow" placeholder='pillow' #pillow="ngModel" ngModel required />
+                <span *ngIf="pillow.invalid && pillow.touched" style="color:red;">enter valid pillow number</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="bedsheet" id="bedsheet" placeholder='bedsheet' #bedsheet="ngModel" ngModel required />
+                <span *ngIf="bedsheet.invalid && bedsheet.touched" style="color:red;">enter valid bedsheet number</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="mattress" id="mattress" placeholder='mattress' #mattress="ngModel" ngModel required />
+                <span *ngIf="mattress.invalid && mattress.touched" style="color:red;">enter valid mattress number</span>
+            </div>
+
+
+
+            <button class="btn mt-3 btn-primary btnm" type="submit" [disabled]="userForm.invalid">Post</button>
+        </form>
+    </div>

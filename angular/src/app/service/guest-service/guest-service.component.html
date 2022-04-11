@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>memberCode</th>
+        <th>phoneNumber</th>
+        <th>company</th>
+        <th>name</th>
+        <th>email</th>
+        <th>gender</th>
+        <th>address</th>  
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let obj of guests; let j=index">
+        <td>{{obj.memberCode}}</td>
+        <td>{{obj.phoneNumber}}</td>
+        <td>{{obj.company}}</td>
+        <td>{{obj.name}}</td>
+        <td>{{obj.email}}</td>
+        <td>{{obj.gender}}</td>
+        <td>{{obj.address}}</td>
+        <td><a class="btn btn-sm text-white btn-danger" (click)="deleteguest(obj.memberCode)" >Delete</a></td>
+    </tr>
+    
+</tbody>
+    </table>
+    <a routerLink="../guest-form"> 
+        <button  class="btn bg-success btn-success btn-lg">Add Guest</button>  </a>
+</div>

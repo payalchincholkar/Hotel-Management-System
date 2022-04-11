@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>rNumber</th>
+        <th>rType</th>
+        <th>rStatus</th>
+        <th>rPrice</th> 
+        <th>delete</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let obj of rooms; let j=index"> 
+        <td>{{obj.rNumber}}</td>
+        <td>{{obj.rType}}</td>
+        <td>{{obj.rStatus}}</td>
+        <td>{{obj.rPrice}}</td>
+         <td><a class="btn btn-sm text-white btn-danger" (click)="deleteroom(obj.rNumber)" >Delete</a></td>  
+    </tr>
+    <br>
+    <br>
+    
+    <a routerLink="../addroom"> 
+        <button  class=" btn bg-success btn-success btn-lg">Post</button>  </a>
+</tbody>
+    </table>
+</div>
+ 

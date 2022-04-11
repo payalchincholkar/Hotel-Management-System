@@ -1,0 +1,50 @@
+<div class="text-center mt-4 name">
+    <h1>Post Staff Data</h1>
+</div>
+<form novalidate>
+
+
+
+    <div class="wrapper">
+        <form class="p-3 mt-3 staffform" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+            <div class="form-field d-flex align-items-center  "> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="code" id="code" placeholder='code' required #code="ngModel" ngModel required />
+                <span *ngIf="code.invalid && code.touched" style="color:red;">enter valid code</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="employeeName" id="employeeName" placeholder='employeeName' required #employeeName ="ngModel"  ngModel required />
+                <span *ngIf="employeeName.invalid && employeeName.touched" style="color:red;">enter valid employeeName</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="employeeAddress" id="employeeAddress" placeholder='employeeAddress' required #employeeAddress ="ngModel" ngModel
+                    required />
+                    <span *ngIf="employeeAddress.invalid && employeeAddress.touched" style="color:red;">enter valid employeeAddress</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="nic" id="nic" placeholder='nic' required #nic ="ngModel"  ngModel required />
+                <span *ngIf="nic.invalid && nic.touched" style="color:red;">enter valid nic</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="salary" id="salary" placeholder='salary' required #salary ="ngModel"  ngModel required />
+                <span *ngIf="salary.invalid && salary.touched" style="color:red;">enter valid salary</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="nameAge" id="nameAge" placeholder='nameAge' required #nameAge ="ngModel"  ngModel required />
+                <span *ngIf="nameAge.invalid && nameAge.touched" style="color:red;">enter valid nameAge</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="occupation" id="occupation" placeholder='occupation' required #occupation ="ngModel" minlength="3" ngModel required />
+                <span *ngIf="occupation.invalid && occupation.touched" style="color:red;">enter valid occupation</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="email" id="email" placeholder='email' #email="ngModel" email  ngModel required />
+                <span *ngIf="email.invalid && email.touched" style="color:red;">enter valid email</span>
+            </div>
+
+            
+             <button class="btn mt-2 btn-primary btnm" type="submit" [disabled]="userForm.invalid">Submit</button> 
+            
+        </form>
+    </div>
+    <router-outlet></router-outlet>
+    

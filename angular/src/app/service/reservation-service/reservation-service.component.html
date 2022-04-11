@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>code</th>
+        <th>numberOfChildren</th>
+        <th>numberOfAdults</th>
+        <th>checkInDate</th>
+        <th>checkOutDate</th>
+        <th>status</th>
+        <th>numberOfNights</th>  
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let reservation of reservations"> 
+        <td>{{reservation.code}}</td>
+        <td>{{reservation.numberOfChildren}}</td>
+        <td>{{reservation.numberOfAdults}}</td>
+        <td>{{reservation.checkInDate}}</td>
+        <td>{{reservation.checkOutDate}}</td>
+        <td>{{reservation.status}}</td>
+        <td>{{reservation.numberOfNights}}</td>
+        
+    </tr>
+    <br>
+    <br>
+    <a routerLink="../addreservation"> 
+        <button  class="btn bg-success btn-success btn-lg">Post</button>  </a>
+    
+</tbody>
+    </table>
+</div>
+
+

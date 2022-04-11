@@ -1,0 +1,29 @@
+<div class="text-center mt-4 name">
+    <h1>Post room Data</h1>
+</div>
+<form novalidate>
+
+    <div class="wrapper">
+        <form class="p-3 mt-3 roomform" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="rNumber" id="rNumber" placeholder='rNumber' required #rNumber="ngModel" ngModel />
+                <span *ngIf="rNumber.invalid && rNumber.touched" style="color:red;">enter valid room number</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="rType" id="rType" placeholder='rType' required #rType="ngModel" pattern="[a-zA-Z]+$" ngModel  />
+                <span *ngIf="rType.invalid && rType.touched" style="color:red;">enter valid room type</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="rStatus" id="rStatus" placeholder='rStatus' required #rStatus="ngModel" pattern="[a-zA-Z]+$" ngModel  />
+                <span *ngIf="rStatus.invalid && rStatus.touched" style="color:red;">enter valid room status</span>
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="rPrice" id="rPrice" placeholder='rPrice' required #rPrice="ngModel"  ngModel  />
+                <span *ngIf="rPrice.invalid && rPrice.touched" style="color:red;">enter valid room price</span>
+            </div>
+
+
+
+             <button class="btn mt-3 btn-primary btnm" type="submit" [disabled]="userForm.invalid">Post</button> 
+        </form>
+    </div>

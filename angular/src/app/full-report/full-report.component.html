@@ -1,0 +1,159 @@
+<h1 class="text-center ">Manager Service</h1>
+<h2>Staff details</h2>
+<div class="container">
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>code</th>
+        <th>employeeName</th>
+        <th>employeeAddress</th>
+        <th>nic</th>
+        <th>salary</th>
+        <th>nameAge</th>
+        <th>occupation</th> 
+        <th>email</th> 
+        
+    </tr>
+</thead>
+<tbody>
+    
+        <tr *ngFor="let obj of staffs; let j=index">
+        <td>{{obj.code}}</td>
+        <td>{{obj.employeeName}}</td>
+        <td>{{obj.employeeAddress}}</td>
+        <td>{{obj.nic}}</td>
+        <td>{{obj.salary}}</td>
+        <td>{{obj.nameAge}}</td>
+        <td>{{obj.occupation}}</td>
+        <td>{{obj.email}}</td>
+        </tr>
+</tbody>
+    </table>
+</div>
+
+
+<br>
+<br>
+<br>
+<h2>Room details</h2>
+<div class="container">
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>rNumber</th>
+        <th>rType</th>
+        <th>rStatus</th>
+        <th>rPrice</th> 
+        
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let obj of rooms; let j=index"> 
+        <td>{{obj.rNumber}}</td>
+        <td>{{obj.rType}}</td>
+        <td>{{obj.rStatus}}</td>
+        <td>{{obj.rPrice}}</td>
+    </tr>
+</tbody>
+    </table>
+</div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <h2>Inventry details</h2>
+    <div class="container">
+        <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>beds</th>
+            <th>tables</th>
+            <th>chairs</th>
+            <th>pillow</th>
+            <th>bedsheet</th>
+            <th>mattress</th>  
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of inventories; let j=index">
+            <td>{{obj.id}}</td>
+            <td>{{obj.beds}}</td>
+            <td>{{obj.tables}}</td>
+            <td>{{obj.chairs}}</td>
+            <td>{{obj.pillow}}</td>
+            <td>{{obj.bedsheet}}</td>
+            <td>{{obj.mattress}}</td>
+        </tr>
+    </tbody>
+        </table>
+    </div>
+
+
+
+        <br>
+        <br>
+        <br>
+        <h1 class="text-center ">Receptionist Service</h1>
+        <h2>Guest Details</h2>
+        <div class="container">
+            <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>memberCode</th>
+                <th>phoneNumber</th>
+                <th>company</th>
+                <th>name</th>
+                <th>email</th>
+                <th>gender</th>
+                <th>address</th>  
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let obj of guests; let j=index">
+                <td>{{obj.memberCode}}</td>
+                <td>{{obj.phoneNumber}}</td>
+                <td>{{obj.company}}</td>
+                <td>{{obj.name}}</td>
+                <td>{{obj.email}}</td>
+                <td>{{obj.gender}}</td>
+                <td>{{obj.address}}</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+
+            <br>
+            <br>
+            <br>
+            <h2>Reservation Details</h2>
+            <div class="container">
+                <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>code</th>
+                    <th>numberOfChildren</th>
+                    <th>numberOfAdults</th>
+                    <th>checkInDate</th>
+                    <th>checkoutDate</th>
+                    <th>status</th>
+                    <th>numberOfNights</th>  
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let reservation of reservations"> 
+                    <td>{{reservation.code}}</td>
+                    <td>{{reservation.numberOfChildren}}</td>
+                    <td>{{reservation.numberOfAdults}}</td>
+                    <td>{{reservation.checkInDate}}</td>
+                    <td>{{reservation.checkoutDate}}</td>
+                    <td>{{reservation.status}}</td>
+                    <td>{{reservation.numberOfNights}}</td>
+                    
+                </tr>
+            </tbody>
+                </table>
+            </div>
+            

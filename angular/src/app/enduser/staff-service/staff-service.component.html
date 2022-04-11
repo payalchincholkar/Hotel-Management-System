@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>code</th>
+        <th>employeeName</th>
+        <th>employeeAddress</th>
+        <th>nic</th>
+        <th>salary</th>
+        <th>nameAge</th>
+        <th>occupation</th> 
+        <th>email</th> 
+        
+        <th> delete</th>
+        <th> Update</th>
+    </tr>
+</thead>
+<tbody>
+    
+        <tr *ngFor="let obj of staffs; let j=index">
+        <td>{{obj.code}}</td>
+        <td>{{obj.employeeName}}</td>
+        <td>{{obj.employeeAddress}}</td>
+        <td>{{obj.nic}}</td>
+        <td>{{obj.salary}}</td>
+        <td>{{obj.nameAge}}</td>
+        <td>{{obj.occupation}}</td>
+        <td>{{obj.email}}</td>
+        <td><a class="btn btn-sm text-white btn-danger" (click)="deletestaff(obj.code)" >Delete</a></td>
+        <td><button (click)="update(obj.code)" class="btn btn-info">Update</button></td>
+
+    </tr>
+    <br>
+    <br>
+    <a routerLink="../addstaff"> 
+        <button  class=" btn bg-success btn-success btn-lg ">Post</button>  </a>
+      
+</tbody>
+    </table>
+</div>
+

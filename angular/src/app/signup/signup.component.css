@@ -1,0 +1,22 @@
+.text-cent{
+    margin-right: "3em";
+}
+
+.bgcolor{
+    background-color: sandybrown;
+    height: 3em;
+    margin-top: 0em;
+}
+
+#role{
+    padding: 2px 5px;
+    border: 1px solid #9e9e9ee8;
+    border-radius: 3px;
+    font-size: 18px;
+    width:75%;
+}
+option{
+    font-size: 18px;
+}
+
+

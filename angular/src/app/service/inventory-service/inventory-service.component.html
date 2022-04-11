@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>id</th>
+        <th>beds</th>
+        <th>tables</th>
+        <th>chairs</th>
+        <th>pillow</th>
+        <th>bedsheet</th>
+        <th>mattress</th>  
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let obj of inventories; let j=index">
+        <td>{{obj.id}}</td>
+        <td>{{obj.beds}}</td>
+        <td>{{obj.tables}}</td>
+        <td>{{obj.chairs}}</td>
+        <td>{{obj.pillow}}</td>
+        <td>{{obj.bedsheet}}</td>
+        <td>{{obj.mattress}}</td>
+        <td><a class="btn btn-sm text-white btn-danger" (click)="deleteinventory(obj.id)" >Delete</a></td>
+    </tr>
+    <br>
+    <br>
+    <a routerLink="../addinventory"> 
+        <button  class=" btn bg-success btn-success btn-lg">Post</button>  </a>
+</tbody>
+    </table>
+</div>
+ 

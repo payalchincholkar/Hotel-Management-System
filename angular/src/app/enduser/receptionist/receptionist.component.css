@@ -1,0 +1,19 @@
+.bk-color{
+background-color: bisque;
+height: 100em;
+}
+.guest
+{
+  color: black;
+  margin-right: 3em;  
+}
+.reservation
+{
+    color: black;
+    margin-left: 4em;
+}
+.font
+{
+    font-size: 2em;
+    
+}

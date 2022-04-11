@@ -1,0 +1,26 @@
+<div class="text-center mt-4 name">
+    <h1>Payment details</h1>
+</div>
+<form novalidate>
+
+    <div class="wrapper">
+        
+        <form class="p-3 mt-3 paymentform" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="orderId" id="orderId" placeholder='orderId' ngModel required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="amount" id="amount" placeholder='amount' ngModel required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" class="bdradius" name="paymentStatus" id="paymentStatus" placeholder='paymentStatus' ngModel required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text"  class="bdradius" name="taxId" id="taxId" placeholder='taxId' ngModel required />
+            </div>
+
+
+
+             <button class="btn mt-3 btn-primary btnm" type="submit">make payment</button> 
+        </form>
+    </div>

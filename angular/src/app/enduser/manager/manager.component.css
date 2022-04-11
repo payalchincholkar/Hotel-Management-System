@@ -1,0 +1,26 @@
+/* .bk1-color{
+    background-color: w;
+    height: 80em;
+} */
+.backh{
+    background-color: wheat;
+    height: 50em;
+}
+.fonts{
+    font-size: 2em;
+    margin-left: 10em;
+}
+.staff
+{
+    color: black;
+    margin-right: 4em;
+}
+.invt
+{
+    margin-left: 4em;
+    color: black;
+}
+.room
+{
+    color: black;
+}

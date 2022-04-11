@@ -1,0 +1,40 @@
+
+<div class="text-center mt-4 name">
+    <h1>update Staff Data</h1>
+</div>
+<form novalidate #updateform='ngForm' >
+       <div class="wrapper">
+        <div class="text-center mt-4 name"> Update </div>
+        <form class="p-3 mt-3" #userForm="ngForm">
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" name="code" id="code" placeholder='code' [(ngModel)]="staff.code" required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" name="employeeName" id="employeeName" placeholder=' employeeName' 
+                [(ngModel)]="staff.employeeName" required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" name="employeeAddress" id="employeeAddress" placeholder='employeeAddress' [(ngModel)]="staff.employeeAddress"
+                    required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" name="nic" id="nic" placeholder='nic' [(ngModel)]="staff.nic" required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" name="salary" id="salary" placeholder='salary' [(ngModel)]="staff.salary" required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" name="nameAge" id="nameAge" placeholder='nameAge' [(ngModel)]="staff.nameAge" required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" name="occupation" id="occupation" placeholder='occupation' [(ngModel)]="staff.occupation" required />
+            </div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+                <input type="text" name="email" id="email" placeholder='email' [(ngModel)]="staff.email" required />
+            </div>
+
+            
+             <button class="btn mt-1" (click)="update()"  type="submit">Submit</button> 
+            
+        </form>
+    </div>
